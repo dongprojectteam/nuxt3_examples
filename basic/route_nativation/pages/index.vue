@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang='ts'>
-const onCart = () => navigateTo({
+const onCart = async () => await navigateTo({
   path: '/cart',
   query: {
     item: 1
@@ -25,6 +25,9 @@ const onCart = () => navigateTo({
   }
 })
 
-const onProfile = () => navigateTo('/profile')
+const onProfile = async () => {
+  const ret = await navigateTo('/profile')
+  console.log(ret)
+}
 
 </script>
