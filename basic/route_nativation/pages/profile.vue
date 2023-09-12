@@ -1,3 +1,3 @@
 <template>
-  <h1>Profile</h1>
+  <h1>Profile of </h1>
 </template>

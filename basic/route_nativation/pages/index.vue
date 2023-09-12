@@ -1,9 +1,18 @@
 <template>
   <div>
     <h1>Home</h1>
-    <NuxtLink to='/bookstore'>Book Store</NuxtLink> |
-    <a href='#' @click='onCart'>Cart</a> |
-    <a href='#' @click='onProfile'>Profile</a>
+    <button>
+      <NuxtLink to='/bookstore' replace>Book Store (Internal)</NuxtLink>
+    </button>
+    <button>
+      <NuxtLink to='http://nuxt.com'>Nuxt (External)</NuxtLink>
+    </button>
+    <button>
+      <NuxtLink to='http://nuxt.com' custom>Nuxt (Custom)</NuxtLink>
+    </button>
+    <button @click='onCart'>Cart</button>
+    <button @click='onProfile'>Profile</button>
+    <button @click='onNuxt'>Nuxt (Programatic)</button>
   </div>
 </template>
 
@@ -19,15 +28,18 @@ const onCart = async () => await navigateTo({
   open: {
     target: '_blank',
     windowFeatures: {
+      popup: true,
       width: 600,
-      height: 400
+      height: 400,
+      left: 200,
+      top: 200
     }
   }
 })
 
-const onProfile = async () => {
-  const ret = await navigateTo('/profile')
-  console.log(ret)
-}
+const onProfile = async () => await navigateTo('/profile')
 
+const onNuxt = async () => await navigateTo('http://nuxt.com',
+  { external: true })
 </script>
+
