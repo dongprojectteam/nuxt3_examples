@@ -5,6 +5,6 @@
   </div>
 </template>
 
-<script setup lang='ts'>
-const count = useState<number>('count', () => 100)
+<script setup lang="ts">
+  const count = useState<number>('count', () => 100)
 </script>
