@@ -1,0 +1,3 @@
+<template>
+  <Navigator></Navigator>
+</template>
