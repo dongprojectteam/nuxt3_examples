@@ -5,9 +5,17 @@
 </template>
 
 <script setup>
-const { data, pending } = await useAsyncData('userData', () => $fetch('/api/my_data'),
-  {
-    transform: (_data) => _data.results[0],
-    lazy: true
-  })
+const data = ref()
+const pending = ref(true)
+const response = await $fetch('https://randomuser.me/api/', {
+  async onRequest({ request, options }) {
+    console.log(request)
+    pending.value = true
+  },
+  async onResponse({ request, options, response }) {
+    console.log(response.body)
+    pending.value = false
+  }
+})
+data.value = response.results[0]
 </script>
