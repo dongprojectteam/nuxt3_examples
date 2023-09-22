@@ -1,0 +1,12 @@
+.c1-variables {
+  color: #FF0000;
+  background-color: #FF1111;
+}
+
+.c1-global {
+  content: local value;
+}
+
+.c1-w-100 {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */

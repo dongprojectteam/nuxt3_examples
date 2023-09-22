@@ -1,0 +1,9 @@
+.c6-button, .c6-button--status-visited, .c6-button--status-active {
+  background-color: blue;
+}
+.c6-button--status-active {
+  font-weight: bold;
+}
+.c6-button--status-visited {
+  text-decoration: underline;
+}/*# sourceMappingURL=index.css.map */

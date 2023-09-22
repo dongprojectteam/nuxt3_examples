@@ -1,0 +1,23 @@
+@media print {  
+  div {
+    .section {
+      display: box;
+
+      @at-root (without: media) {
+        content: remove_media;
+      }
+
+      @at-root (with: rule) {
+        content: with_rule;
+      }
+
+      @at-root (with: all) {
+        content: with_all;
+      }
+
+      @at-root .article {
+        content: remove_style_rules;
+      }
+    }
+  }
+}

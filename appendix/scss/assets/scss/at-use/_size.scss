@@ -1,0 +1,10 @@
+$c2-large: 30px;
+$_c2-small: 10px;
+
+.c2-small {
+  font-size: $_c2-small; // Private
+}
+
+.c2-large {
+  font-size: $c2-large;
+}

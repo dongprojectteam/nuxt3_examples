@@ -1,0 +1,16 @@
+.c6-button {
+  background-color: blue;
+
+  &--status {
+    &-active {
+      @extend .c6-button;
+      font-weight: bold;
+    }
+
+    &-visited {
+      @extend .c6-button;
+      text-decoration: underline;
+    }
+  }
+}
+

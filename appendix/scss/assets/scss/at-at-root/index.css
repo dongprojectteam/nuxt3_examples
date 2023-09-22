@@ -1,0 +1,17 @@
+@media print {
+  div .section {
+    display: box;
+    content: with_all;
+  }
+}
+div .section {
+  content: remove_media;
+}
+div .section {
+  content: with_rule;
+}
+@media print {
+  .article {
+    content: remove_style_rules;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,13 @@
+@use 'color' with (
+  // $c2-red: #FF1111, // Error
+  $c2-blue: #1111FF
+);
+
+@use 'size' as *;
+
+.c2-normal {
+  // font-size: color.$_c2-small; //  Error
+  font-size: $c2-large;
+  color: color.$c2-blue;
+  background-color: color.$c2-red;
+}

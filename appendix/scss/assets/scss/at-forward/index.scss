@@ -1,0 +1,7 @@
+@use 'helper';
+
+.c3-normal {
+  // font-size: helper.$_c2-small; // Error
+  font-size: helper.$c2-large;
+  color: helper.$c2-red;
+}

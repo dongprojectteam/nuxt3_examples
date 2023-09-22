@@ -1,0 +1,21 @@
+@use "sass:string";
+
+@function insert($string, $insert, $index) {
+  $before: string.slice($string, 1, $index);
+  $after: string.slice($string, $index + 1);
+  @return $before + $insert + $after;
+}
+
+$string: 'Donghae, Bakdu';
+
+.c5-str1 {
+  content: insert($string, 'Beautiful ', 0);
+}
+
+.c5-str2 {
+  content: insert($string, ', Greate', 7);
+}
+
+.c5-str3 {
+  content: insert($string, ' and Hanra', string.length($string));
+}

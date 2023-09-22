@@ -1,0 +1,12 @@
+@mixin c4-font-decorator($size, $color) {
+  font-size: $size;
+  color: #{$color};
+}
+
+.c4-big-font {
+  @include c4-font-decorator(24, 'black');
+}
+
+.c4-small-font {
+  @include c4-font-decorator(12, '#FF0000');
+}
