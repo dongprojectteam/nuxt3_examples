@@ -1,0 +1,46 @@
+/* 1 변수 선언 */
+$small-font-size: 0.8rem;
+$medium-font-size: 1.4rem;
+$large-font-size: 1.8rem;
+
+/* 2 mixin 선언 */
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin font-color($size) {
+  color: $size;
+}
+
+/* 3 map 선언 */
+$_sizes: (
+  'sm': $small-font-size,
+  'md': $medium-font-size,
+  'lg': $large-font-size
+);
+
+$_colors: (
+  'primary': var(--dmart-primary),
+  'basic': var(--dmart-basic),
+  'white': var(--dmart-white),
+  'dark': var(--dmart-dark),
+  'danger': var(--dmart-danger)
+);
+
+/* 4 반복문 사용 */
+@each $key, $size in $_sizes {
+  .t-#{$key} {
+    @include font-size($size);
+  }
+}
+
+@each $key, $color in $_colors {
+  .t-#{$key} {
+    @include font-color($color);
+  }
+}
+
+/* 5 일반 CSS */
+.t-center {
+  text-align: center;
+}

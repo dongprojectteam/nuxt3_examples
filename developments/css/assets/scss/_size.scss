@@ -1,0 +1,18 @@
+/* 1 calc 함수 사용 */
+$small-component-height: var(--component-height);
+$medium-component-height: calc(var(--component-height) + var(--component-height-gap));
+$large-component-height: calc(var(--component-height) + var(--component-height-gap) * 2);
+
+@mixin component-height($height) {
+  height: $height;
+}
+
+$_dimensions: ('h': 'height', 'w':'width');
+$_sizes: ('100', '90', '80');
+@each $key, $style in $_dimensions {
+  @each $size in $_sizes {
+    .#{$key}-#{$size} {
+      #{$style}: #{$size} + '%' !important;
+    }
+  }
+}

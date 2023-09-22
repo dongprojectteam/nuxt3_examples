@@ -1,0 +1,24 @@
+@use 'helper' as *;
+
+$sizes: (
+  'sm' $small-font-size $small-component-height,
+  'md' $medium-font-size $medium-component-height,
+  'lg' $large-font-size $large-component-height,
+);
+
+@each $key, $font-size, $height in $sizes {
+  .#{$key} {
+    @include font-size($font-size);
+    @include component-height($height);  
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-center { 
+    @extend .flex;
+    align-items: center;
+    justify-content: center;
+  }  
+}

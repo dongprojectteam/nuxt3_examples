@@ -1,0 +1,31 @@
+$_spaces: ('0': 0, '1': var(--sm), '2': var(--md), '3': var(--lg), '4': var(--xl));
+$_directions: ('s': 'left', 'e':'right', 't':'top', 'b':'bottom');
+
+/* 1 2중 순환문 */
+@each $key, $value in $_spaces {
+  .p-#{$key} {
+    padding: $value;
+  }
+
+  .m-#{$key} {
+    margin: $value;
+  }
+
+  @each $dkey, $direction in $_directions {
+    .p#{$dkey}-#{$key} {
+      padding-#{$direction}: $value;
+    }
+
+    .m#{$dkey}-#{$key} {
+      margin-#{$direction}: $value;
+    }
+  }
+}
+
+.ms-auto {
+  margin-left: auto;
+}
+
+.me-auto {
+  margin-right: auto;
+}
