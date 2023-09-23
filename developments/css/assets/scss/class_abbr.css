@@ -41,23 +41,23 @@
 }
 
 .t-primary {
-  color: var(--dmart-primary);
+  color: var(--color-primary);
 }
 
 .t-basic {
-  color: var(--dmart-basic);
+  color: var(--color-basic);
 }
 
 .t-white {
-  color: var(--dmart-white);
+  color: var(--color-white);
 }
 
 .t-dark {
-  color: var(--dmart-dark);
+  color: var(--color-dark);
 }
 
 .t-danger {
-  color: var(--dmart-danger);
+  color: var(--color-danger);
 }
 
 /* 5 일반 CSS */
@@ -289,10 +289,11 @@
   height: calc(var(--component-height) + var(--component-height-gap) * 2);
 }
 
-.flex, .flex-center {
+.flex,
+.flex-center {
   display: flex;
 }
 .flex-center {
   align-items: center;
   justify-content: center;
-}/*# sourceMappingURL=class_abbr.css.map */
+} /*# sourceMappingURL=class_abbr.css.map */

@@ -1,7 +1,7 @@
 $c1-red: #FF0000;
-$c1-old-red: $c1-red;
+$c1-old-red: $c1-red; // 할당
 
-$c1-red: #FF1111;
+$c1-red: #FF1111; // 재선언
 
 .c1-variables {
   color: $c1-old-red;
@@ -9,8 +9,8 @@ $c1-red: #FF1111;
 }
 
 .c1-local {
-  // $c1-local: local value; // Error 발생!
-  $c1-local: local value !global;
+  // $c1-local: value; // Error 발생!
+  $c1-local: value !global; // 전역 변수
 }
 
 .c1-global {

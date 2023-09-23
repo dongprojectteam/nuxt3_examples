@@ -1,4 +1,4 @@
-/* 1 */
+/* 코드 1 */
 html,
 body,
 #__nuxt {
@@ -7,13 +7,13 @@ body,
   margin: 0;
 }
 
-/* 2 */
+/* 코드 2 */
 :root {
-  --dmart-primary: rgb(0, 123, 255);
-  --dmart-basic: rgb(255, 229, 153);
-  --dmart-white: rgb(229, 237, 238);
-  --dmart-dark: rgb(61, 61, 61);
-  --dmart-danger: rgba(204, 57, 57, 0.87);
+  --color-primary: rgb(0, 123, 255);
+  --color-basic: rgb(255, 229, 153);
+  --color-white: rgb(229, 237, 238);
+  --color-dark: rgb(61, 61, 61);
+  --color-danger: rgba(204, 57, 57, 0.87);
 
   --sm: 5px;
   --md: 15px;
@@ -24,31 +24,31 @@ body,
   --component-height-gap: 0.8rem;
 }
 
-/* 3 */
+/* 코드 3 */
 button {
   height: 100%;
   font-family: 'Arial Black';
   font-weight: bold;
-  color: var(--dmart-primary);
-  background-color: var(--dmart-basic);
+  color: var(--color-primary);
+  background-color: var(--color-basic);
   border: 1px solid black;
   border-radius: 5px;
 }
 
-/* 4 */
+/* 코드 4 */
 button:hover {
   transform: translateY(1px);
 }
 
 button:active {
-  box-shadow: 0 1px var(--dmart-dark);
+  box-shadow: 0 1px var(--color-dark);
 }
 
-/* 5 */
+/* 코드 5 */
 a:active,
 a:hover,
 a:link,
 a:visited {
-  color: var(--dmart-primary);
+  color: var(--color-primary);
   text-decoration: unset;
 }
