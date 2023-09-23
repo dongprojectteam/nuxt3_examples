@@ -1,7 +1,7 @@
 $_spaces: ('0': 0, '1': var(--sm), '2': var(--md), '3': var(--lg), '4': var(--xl));
 $_directions: ('s': 'left', 'e':'right', 't':'top', 'b':'bottom');
 
-/* 1 2중 순환문 */
+/* 코드 1: 2중 순환문 */
 @each $key, $value in $_spaces {
   .p-#{$key} {
     padding: $value;

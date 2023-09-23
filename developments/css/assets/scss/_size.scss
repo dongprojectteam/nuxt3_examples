@@ -1,5 +1,6 @@
-/* 1 calc 함수 사용 */
 $small-component-height: var(--component-height);
+
+/* 코드 1: calc 함수 사용 */
 $medium-component-height: calc(var(--component-height) + var(--component-height-gap));
 $large-component-height: calc(var(--component-height) + var(--component-height-gap) * 2);
 

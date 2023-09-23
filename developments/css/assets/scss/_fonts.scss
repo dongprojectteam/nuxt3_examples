@@ -1,18 +1,18 @@
-/* 1 변수 선언 */
+/* 코드 1: 변수 선언 */
 $small-font-size: 0.8rem;
 $medium-font-size: 1.4rem;
 $large-font-size: 1.8rem;
 
-/* 2 mixin 선언 */
+/* 코드 2: mixin 선언 */
 @mixin font-size($size) {
   font-size: $size;
 }
 
-@mixin font-color($size) {
-  color: $size;
+@mixin font-color($color) {
+  color: $color;
 }
 
-/* 3 map 선언 */
+/* 코드 3: map 선언 */
 $_sizes: (
   'sm': $small-font-size,
   'md': $medium-font-size,
@@ -27,7 +27,7 @@ $_colors: (
   'danger': var(--color-danger)
 );
 
-/* 4 반복문 사용 */
+/* 코드 4: 반복문 사용 */
 @each $key, $size in $_sizes {
   .t-#{$key} {
     @include font-size($size);
@@ -40,7 +40,7 @@ $_colors: (
   }
 }
 
-/* 5 일반 CSS */
+/* 코드 5: 일반 CSS */
 .t-center {
   text-align: center;
 }

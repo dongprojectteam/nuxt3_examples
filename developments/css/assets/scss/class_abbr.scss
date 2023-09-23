@@ -1,3 +1,4 @@
+/* 코드 1: 헬퍼 사용 및 네임스페이스 제거 */
 @use 'helper' as *;
 
 $sizes: (
@@ -13,6 +14,7 @@ $sizes: (
   }
 }
 
+/* 코드 2: @extend 규칙을 이용한 선택자 확장 */
 .flex {
   display: flex;
 
