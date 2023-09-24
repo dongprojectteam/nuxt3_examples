@@ -8,6 +8,7 @@ import For from './components/For.vue'
 import Form from './components/Form.vue'
 import PropsTAG from './components/Props.vue'
 import Slot from './components/Slot.vue'
+import Watcher from './components/Watcher.vue'
 
 const menu = ref('props')
 </script>
@@ -17,12 +18,14 @@ const menu = ref('props')
     <header>
       <ul>
         <li @click='menu = "props"'><a href='#'>Tag, Props 그리고 Emits</a></li>
-        <li @click='menu = "slots"'><a href='#'>Slots</a></li>
         <li @click='menu = "declarative"'><a href='#'>선언적 렌더링</a></li>
         <li @click='menu = "form"'><a href='#'>폼 인풋 바인딩</a></li>
         <li @click='menu = "conditional"'><a href='#'>조건부 렌더링</a></li>
         <li @click='menu = "for"'><a href='#'>반복문</a></li>
         <li @click='menu = "computed"'><a href='#'>계산된 속성</a></li>
+        <li @click='menu = "watcher"'><a href='#'>Watcher</a></li>
+        <li @click='menu = "slots"'><a href='#'>Slots</a></li>
+        <li @click='menu = "lifecycle"'><a href='#'>라이프사이클</a></li>
       </ul>
     </header>
 
@@ -34,6 +37,7 @@ const menu = ref('props')
       <Form v-if='menu == "form"'></Form>
       <PropsTAG v-if='menu == "props"'></PropsTAG>
       <Slot v-if='menu == "slots"'></Slot>
+      <Watcher v-if='menu == "watcher"'></Watcher>
     </div>
   </div>
 </template>
