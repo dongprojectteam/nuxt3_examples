@@ -13,9 +13,11 @@ const onEvent = (value: string) => {
 </script>
 
 <template>
-  <p v-show='eventValue'>이벤트 값 : {{ eventValue }}</p>
+  <div id='root'>
+    <p v-show='eventValue'>이벤트 값 : {{ eventValue }}</p>
 
-  <!-- 코드 3: 문자열을 제외하면 v-bind를 이용해 Props 전달 -->
-  <ChildComponentTag stringProps='stringProps' :numberProps=1 :objectProps='{ key: "value" }' :booleanProps=true
-    :listProps='[1, 2, 3, 4]' v-on:child-event='(onEvent)'></ChildComponentTag>
+    <!-- 코드 3: 문자열을 제외하면 v-bind를 이용해 Props 전달 -->
+    <ChildComponentTag stringProps='stringProps' :numberProps=1 :objectProps='{ key: "value" }' :booleanProps=true
+      :listProps='[1, 2, 3, 4]' v-on:child-event='(onEvent)'></ChildComponentTag>
+  </div>
 </template>

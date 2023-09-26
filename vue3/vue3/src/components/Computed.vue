@@ -40,13 +40,15 @@ const onAddDiscountItem = () => {
 
   productId++
 }
-
 </script>
 
 <template>
-  <div v-if='discountItem'>
-    <h2>초 대박 할인 상품 입고!</h2>
-    <p>{{ discountItem }}</p>
+  <div id='root'>
+    <div v-if='discountItem'>
+      <h2>초 대박 할인 상품 입고!</h2>
+      <p>{{ discountItem }}</p>
+    </div>
+    <button @click='onAddDiscountItem'>새 세일상품 등록</button>
   </div>
-  <button @click='onAddDiscountItem'>새 세일상품 등록</button>
 </template>
+

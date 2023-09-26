@@ -43,6 +43,10 @@ const menu = ref('props')
 </template>
 
 <style scoped>
+#root {
+  width: 500px;
+}
+
 header ul {
   position: absolute;
   top: 0;
