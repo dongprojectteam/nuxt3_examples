@@ -3,11 +3,14 @@ import { ref } from 'vue'
 
 import Computed from './components/Computed.vue'
 import Conditional from './components/Conditional.vue'
+import Css from './components/Css.vue'
 import Declarative from './components/Declarative.vue'
 import For from './components/For.vue'
 import Form from './components/Form.vue'
+import Lifecycle from './components/Lifecycle.vue'
 import PropsTAG from './components/Props.vue'
 import Slot from './components/Slot.vue'
+import TemplateRef from './components/TemplateRef.vue'
 import Watcher from './components/Watcher.vue'
 
 const menu = ref('props')
@@ -25,6 +28,8 @@ const menu = ref('props')
         <li @click='menu = "computed"'><a href='#'>계산된 속성</a></li>
         <li @click='menu = "watcher"'><a href='#'>Watcher</a></li>
         <li @click='menu = "slots"'><a href='#'>Slots</a></li>
+        <li @click='menu = "template_ref"'><a href='#'>템플릿 엘리먼트 레퍼런스</a></li>
+        <li @click='menu = "css"'><a href='#'>CSS</a></li>
         <li @click='menu = "lifecycle"'><a href='#'>라이프사이클</a></li>
       </ul>
     </header>
@@ -32,12 +37,16 @@ const menu = ref('props')
     <div>
       <Computed v-if='menu == "computed"'></Computed>
       <Conditional v-if='menu == "conditional"'></Conditional>
+      <Css v-if='menu == "css"'></Css>
       <Declarative v-if='menu == "declarative"'></Declarative>
       <For v-if='menu == "for"'></For>
       <Form v-if='menu == "form"'></Form>
+      <Lifecycle v-if='menu == "lifecycle"'></Lifecycle>
       <PropsTAG v-if='menu == "props"'></PropsTAG>
       <Slot v-if='menu == "slots"'></Slot>
+      <TemplateRef v-if='menu == "template_ref"'></TemplateRef>
       <Watcher v-if='menu == "watcher"'></Watcher>
+
     </div>
   </div>
 </template>
@@ -67,3 +76,14 @@ a {
 }
 </style>
 
+<style>
+#blue_or_red_or_green {
+  color: red;
+}
+</style>
+
+<style module>
+#module_at_app {
+  color: red;
+}
+</style>
