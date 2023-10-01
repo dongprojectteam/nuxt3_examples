@@ -17,3 +17,8 @@ let stringOrNullVariable: string | null
 
 stringOrNullVariable = null
 stringOrNullVariable = 'string'
+
+let stringInitialVariable = 'string'
+
+// 에러가 발생합니다.
+stringInitialVariable = 1
