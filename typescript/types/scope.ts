@@ -3,7 +3,7 @@ function varFoo() {
   var varScopeVariable = 2 // 함수 범위
   console.log(varScopeVariable) // 2
 }
-varFoo()
+varFoo() // 2
 console.log(varScopeVariable) // 1
 
 if (true) {
@@ -11,10 +11,11 @@ if (true) {
 }
 console.log(varScopeVariable) // 3
 
-varFoo()
+varFoo() // 2
 console.log(varScopeVariable) // 3
 
+let letScopeVariable = 4
 if (true) {
-  let letScopeVariable = 10
+  let letScopeVariable = 5
 }
-console.log(letScopeVariable) // 에러
+console.log(letScopeVariable) // 4

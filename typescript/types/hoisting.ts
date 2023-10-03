@@ -1,4 +1,4 @@
-console.log(varHoisting)
+console.log(varHoisting) // undefined
 console.log(letHoisting) // 에러 발생
 console.log(constHoisting) // 에러 발생
 

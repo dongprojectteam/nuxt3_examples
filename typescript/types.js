@@ -1,3 +1,18 @@
+// 변수 선언
+var varVariable;
+varVariable = 1;
+(function () {
+    var varVariable = 2;
+    console.log(varVariable); // 2 출력
+})();
+console.log(varVariable); // 1 출력
+let letVariable;
+letVariable = 1;
+(function () {
+    let letVariable = 2;
+    console.log(letVariable); // 2 출력
+})();
+console.log(letVariable); // 1 출력
 // const constVariableWitoutInitialValue: string // 에러 발생
 // const constVariable = 'const'
 // constVariable = 'new assignment' // 에러 발생

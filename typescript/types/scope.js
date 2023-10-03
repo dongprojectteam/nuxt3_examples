@@ -3,15 +3,16 @@ function varFoo() {
     var varScopeVariable = 2; // 함수 범위
     console.log(varScopeVariable); // 2
 }
-varFoo();
+varFoo(); // 2
 console.log(varScopeVariable); // 1
 if (true) {
     var varScopeVariable = 3; // 전역 함수 재선언
 }
 console.log(varScopeVariable); // 3
-varFoo();
-console.log(varScopeVariable); // 1
+varFoo(); // 2
+console.log(varScopeVariable); // 3
+let letScopeVariable = 4;
 if (true) {
-    let letScopeVariable = 10;
+    let letScopeVariable = 5;
 }
-console.log(letScopeVariable); // 에러
+console.log(letScopeVariable); // 4
