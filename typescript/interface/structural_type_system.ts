@@ -1,0 +1,34 @@
+interface Person {
+  name: string
+  age: number
+}
+
+let person: Person = {
+  name: 'DOPT',
+  age: 22,
+  height: 5.9, // 초과 속성 검사 에러
+}
+
+let person1: Person = {
+  name: 'DOPT',
+  age: 22,
+  height: 5.9, // 구조적 타입 시스템
+} as Person
+
+let dopt = {
+  name: 'DOPT',
+  age: 22,
+  height: 5.9,
+}
+let person3: Person = dopt // 구조적 타입 시스템
+
+function printName(person: Person) {
+  console.log(person.name)
+}
+
+printName({
+  name: 'DOPT',
+  age: 22,
+  height: 5.9, // 초과 속성 검사 에러
+})
+printName(dopt) // 구조적 타입 시스템

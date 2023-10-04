@@ -15,5 +15,5 @@ let centerPoint = { x: 0, y: 0 };
 centerPoint.x = 10; // 에러 발생
 centerPoint = { x: 10, y: 0 };
 let generalPoint = centerPoint;
-generalPoint.x = 10;
+generalPoint.x = 10; // 에러가 발생하지 않습니다.
 console.log(generalPoint);
