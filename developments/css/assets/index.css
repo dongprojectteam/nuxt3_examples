@@ -1,54 +1,7 @@
-/* 코드 1 */
 html,
 body,
 #__nuxt {
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0;
-}
-
-/* 코드 2 */
-:root {
-  --color-primary: rgb(0, 123, 255);
-  --color-basic: rgb(255, 229, 153);
-  --color-white: rgb(229, 237, 238);
-  --color-dark: rgb(61, 61, 61);
-  --color-danger: rgba(204, 57, 57, 0.87);
-
-  --sm: 5px;
-  --md: 15px;
-  --lg: 25px;
-  --xl: 35px;
-
-  --component-height: 2rem;
-  --component-height-gap: 0.8rem;
-}
-
-/* 코드 3 */
-button {
+  width: 100%;
   height: 100%;
-  font-family: 'Arial Black';
-  font-weight: bold;
-  color: var(--color-primary);
-  background-color: var(--color-basic);
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-/* 코드 4 */
-button:hover {
-  transform: translateY(1px);
-}
-
-button:active {
-  box-shadow: 0 1px var(--color-dark);
-}
-
-/* 코드 5 */
-a:active,
-a:hover,
-a:link,
-a:visited {
-  color: var(--color-primary);
-  text-decoration: unset;
+  margin: 0;
 }
