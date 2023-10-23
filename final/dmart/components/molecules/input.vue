@@ -1,10 +1,3 @@
-<template>
-  <span class="form-group">
-    <input :id='formId' :type='type' class="form-control w-100" placeholder="" :value='modelValue' @input='onInput' />
-    <label :for='formId'>{{ label }}</label>
-  </span>
-</template>
-
 <script setup lang='ts'>
 defineProps({
   modelValue: {
@@ -19,6 +12,13 @@ const onInput = (event: Event) => _emits('update:modelValue', (event.target as H
 const { id, label, type } = useAttrs() as Record<string, string>
 const formId = id ?? `formID-${Math.round(Math.random() * 10000).toString()}`
 </script>
+
+<template>
+  <span class="form-group">
+    <input :id='formId' :type='type' class="form-control w-100" placeholder="" :value='modelValue' @input='onInput' />
+    <label :for='formId'>{{ label }}</label>
+  </span>
+</template>
 
 <style scoped>
 .form-group {

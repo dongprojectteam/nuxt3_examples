@@ -1,0 +1,53 @@
+// 코드 1. 색상 변수 생성
+$primary: rgb(255, 83, 0);
+$default: rgb(255, 168, 0);
+$white: rgb(255, 255, 255);
+$dark: rgb(61, 61, 61);
+$inactive: rgb(202, 202, 202);
+$danger: rgba(204, 57, 57);
+
+// 코드 2. 색상 map 생성
+$colors: (
+  'primary': $primary,
+  'default': $default,
+  'white': $white,
+  'dark': $dark,
+  'danger': $danger,
+  'inactive': $inactive
+);
+
+// 코드 3. 간격 설정 변수 생성
+$space-none: 0px;
+$space-sm: 5px;
+$space-md: 15px;
+$space-lg: 25px;
+$space-xl: 35px;
+$spaces: ($space-none, $space-sm, $space-md, $space-lg, $space-xl);
+
+// 코드 4. HTML 엘리먼트의 높이 변수
+$component-height: 2rem;
+$component-height-gap: 0.8rem;
+
+$small-component-height: $component-height;
+$medium-component-height: calc($component-height + $component-height-gap);
+$large-component-height: calc($component-height + $component-height-gap * 2);
+
+// 코드 5. 폰트 크기에 대한 변수
+$small-font-size: 0.8rem;
+$medium-font-size: 1.2rem;
+$large-font-size: 1.4rem;
+
+// CSS 변수 선언
+:root {
+  --color-primary: #{$primary};
+  --color-default: #{$default};
+  --color-white: #{$white};
+  --color-dark: #{$dark};
+  --color-inactive: #{$inactive};
+  --color-danger: #{$danger};
+
+  --font-size-small: #{$small-font-size};
+  --font-normal-small: 1.0rem;
+  --font-size-medium: #{$medium-font-size};
+  --font-size-large: #{$large-font-size};
+}

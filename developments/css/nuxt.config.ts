@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  css: ['~/assets/index.css'],
+  css: ['~/assets/index.css', '~/assets/scss/index.scss']
 })

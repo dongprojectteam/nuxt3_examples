@@ -1,0 +1,25 @@
+/* 코드 2: @extend 규칙을 이용한 선택자 확장 */
+.flex {
+  display: flex;
+
+  &-center { 
+    @extend .flex;
+    align-items: center;
+    justify-content: center;
+  }  
+
+  &-vcenter {
+    @extend .flex;
+    align-items: center;
+  }
+
+  &-hcenter {
+    @extend .flex;
+    justify-content: center;
+  }
+
+  &-column {
+    @extend .flex;
+    flex-flow: column;
+  }
+}
