@@ -22,7 +22,7 @@ $space-sm: 5px;
 $space-md: 15px;
 $space-lg: 25px;
 $space-xl: 35px;
-$spaces: ($space-none, $space-sm, $space-md, $space-lg, $space-xl);
+$spaces: $space-none, $space-sm, $space-md, $space-lg, $space-xl;
 
 // 코드 4. HTML 엘리먼트의 높이 변수
 $component-height: 2rem;
@@ -37,7 +37,7 @@ $small-font-size: 0.8rem;
 $medium-font-size: 1.2rem;
 $large-font-size: 1.4rem;
 
-// CSS 변수 선언
+// CSS 사용자 속성 선언
 :root {
   --color-primary: #{$primary};
   --color-default: #{$default};
