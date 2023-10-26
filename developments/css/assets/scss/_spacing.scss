@@ -1,6 +1,6 @@
 @use './variables' as *;
 
-$_directions: ('s': 'left', 'e':'right', 't':'top', 'b':'bottom');
+$_directions: ('l': 'left', 'r':'right', 't':'top', 'b':'bottom');
 
 @each $space in $spaces {
   $index: index($spaces, $space) - 1;
@@ -34,18 +34,17 @@ $_directions: ('s': 'left', 'e':'right', 't':'top', 'b':'bottom');
 
   @each $dkey, $direction in $_directions {
     .p#{$dkey}-#{$index} {
-      padding-#{$direction}: $space !important;
+      padding-#{$direction}: $space;
     }
 
     .m#{$dkey}-#{$index} {
-      margin-#{$direction}: $space !important;
+      margin-#{$direction}: $space;
     }
   }
 }
 
 @each $dkey, $direction in $_directions {
   .m#{$dkey}-auto {
-    margin-#{$direction}: auto !important;
+    margin-#{$direction}: auto;
   }
 }
-
