@@ -1,44 +1,31 @@
 @use './variables' as *;
 
-/* 코드 2: mixin 선언 */
 @mixin font-size($size) {
-  font-size: $size !important;
+  font-size: $size;
 }
 
 @mixin font-color($color) {
-  color: $color !important;
+  color: $color;
 }
 
-/* 코드 3: map 선언 */
 $_sizes: (
   'sm': $small-font-size,
   'md': $medium-font-size,
   'lg': $large-font-size
 );
 
-$_colors: (
-  'primary': $primary,
-  'default': $default,
-  'white': $white,
-  'dark': $dark,
-  'danger': $danger,
-  'inactive': $inactive
-);
-
-/* 코드 4: 반복문 사용 */
 @each $key, $size in $_sizes {
   .t-#{$key} {
     @include font-size($size);
   }
 }
 
-@each $key, $color in $_colors {
-  .t-#{$key} {
+@each $color-key, $color in $colors {
+  .t-#{$color-key} {
     @include font-color($color);
   }
 }
 
-/* 코드 5: 일반 CSS */
 .t-center {
   text-align: center;
 }
