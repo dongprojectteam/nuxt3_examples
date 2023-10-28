@@ -12,8 +12,8 @@ const props = defineProps({
 })
 
 const emits = defineEmits(['update:modelValue'])
-const { class: _, ...attrs } = useAttrs()
-const { id } = useAttrs() as Record<string, string>
+
+const { class: _, id, ...attrs } = useAttrs() as Record<string, string>
 const boxFormId = id ?? `boxFormId-${Math.round(Math.random() * 10000).toString()}`
 const checked = computed(() => props.checked || props.modelValue)
 
