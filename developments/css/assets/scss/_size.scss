@@ -3,6 +3,7 @@
 
 @mixin component-height($height) {
   height: $height;
+  min-width: $height;
 }
 
 $_dimensions: ('h': 'height', 'w':'width');
