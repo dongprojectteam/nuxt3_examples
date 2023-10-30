@@ -1,30 +1,28 @@
 <script setup lang='ts'>
 const props = defineProps({
-  label: String,
   modelValue: {
-    type: Boolean,
-    default: false
-  },
-  checked: {
     type: Boolean,
     default: false
   }
 })
+defineOptions({ inheritAttrs: false })
 
 const emits = defineEmits(['update:modelValue'])
+const onChange = (checked: boolean) => emits('update:modelValue', checked)
+const selected = ref(props.modelValue)
 
-const { class: _, id, ...attrs } = useAttrs() as Record<string, string>
-const boxFormId = id ?? `boxFormId-${Math.round(Math.random() * 10000).toString()}`
-const checked = computed(() => props.checked || props.modelValue)
+const { id, type: _ } = useAttrs() as Record<string, string | boolean>
+const boxFormId = (id ?? `boxFormId-${Math.round(Math.random() * 10000).toString()}`) as string
 
-const onChange = (event: Event) =>
-  emits('update:modelValue', (event.target as HTMLInputElement).checked)
+watch(() => props.modelValue, newValue => selected.value = newValue)
 </script>
 
 <template>
-  <span class='flex-vcenter'>
-    <input :id='boxFormId' :checked='checked' v-bind='attrs'
-      @change.stop='onChange' />
-    <label v-if='label' :for='boxFormId'>{{ label }}</label>
+  <span class='flex-vcenter' :class='useAttrs().class'>
+    <input type='checkbox' :id='boxFormId' v-bind='useAttrs()' v-model='selected'
+      @change.stop='onChange(($event.target as HTMLInputElement).checked)' />
+    <label v-if='useAttrs().label' :for='boxFormId'>
+      {{ useAttrs().label }}
+    </label>
   </span>
 </template>
