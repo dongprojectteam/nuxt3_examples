@@ -51,10 +51,10 @@ onUpdated(() => {
 </script>
 
 <template>
-  <span class="vcenter" :class="useAttrs().class">
-    <input v-bind="fallThrough" v-model="selected"
-      @change.stop="onChange(($event.target as HTMLInputElement).checked)" />
-    <label :for="id" class='ml-1'>
+  <span class='vcenter' :class='useAttrs().class'>
+    <input v-bind='fallThrough' v-model='selected'
+      @change.stop='onChange(($event.target as HTMLInputElement).checked)' />
+    <label :for='id' class='ml-1'>
       <slot></slot>
     </label>
   </span>
