@@ -2,10 +2,13 @@
 const smChecked = ref(false)
 const mdChecked = ref(false)
 const lgChecked = ref(false)
+
+const loading = ref(true)
 </script>
 
 <template>
-  <div class='m-4'>
+  <Loader v-if='loading'></Loader>
+  <div v-else class='m-4'>
     <Input id='input_form' type='input' label='sm' class='sm' />
     <Input id='input_form' type='input' label='md' class='md' />
     <Input id='input_form' type='input' label='lg' class='lg' />
