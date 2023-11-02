@@ -58,28 +58,24 @@ const categories = [
   { label: "women's clothing", active: false },
 ]
 
-// const { addCartItem } = useCart()
-const addCartItem = () => {
-  console.log('addCartItem')
-}
+const addCartItem = () => console.log('addCartItem')
 
 const onClick = () => console.log('onClick')
 </script>
 
 <template>
-  <Category :categories='categories' @click='onClick'></Category>
-  <!-- <div class='flex-column h-100'>
+  <div class='flex-column h-100'>
     <Category :categories='categories' @click='onClick'></Category>
     <div class='container p-3 pt-0'>
       <div v-for='product in products' :key='product.id' class='m-3'>
         <ProductCard :product='product' @to-cart='addCartItem'></ProductCard>
       </div>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <style scoped lang='scss'>
-// @use '~/assets/scss/variables' as *;
+@use '~/assets/scss/variables' as *;
 
 .container {
   display: grid;
