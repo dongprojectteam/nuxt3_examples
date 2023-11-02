@@ -41,7 +41,6 @@ watch(
 )
 
 onUpdated(() => {
-  console.log('updated')
   Object.assign(fallThrough, {
     ...useAttrs(),
     id,
