@@ -1,0 +1,8 @@
+[
+  {
+    "label": "장바구니",
+    "to": "/cart",
+    "count": 0,
+    "newWindow": false
+  }
+]
