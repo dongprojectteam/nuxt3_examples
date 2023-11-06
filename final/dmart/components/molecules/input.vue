@@ -5,7 +5,7 @@ const _emits = defineEmits(['update:modelValue'])
 const onInput = (event: Event) => _emits('update:modelValue', (event.target as HTMLInputElement).value)
 
 const { id, label, type } = useAttrs() as Record<string, string>
-const formId = id ?? `formID-${Math.round(Math.random() * 10000).toString()}`
+const formId = id ?? randomId('formId')
 </script>
 
 <template>

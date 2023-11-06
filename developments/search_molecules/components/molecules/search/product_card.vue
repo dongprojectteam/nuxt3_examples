@@ -10,7 +10,7 @@ const toCart = (id: number) => emits('to-cart', id)
     <div class='image t-center p-1'>
       <img :src="product.image" class='image-item' />
     </div>
-    <div class='p-1 pl-2 border-left-inactive'>
+    <div class='p-1 pl-2 border-left-inactive mr-auto'>
       <h3 class='t-primary m-0'>{{ product.title }}</h3>
       <p class='m-0'>{{ product.category }}</p>
       <p class='t-sm'>{{ product.description }}</p>

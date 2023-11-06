@@ -17,8 +17,7 @@ const {
   type: _,
   ...attrs
 } = useAttrs() as Record<string, any>
-const id = (originalId ??
-  `boxFormId-${Math.round(Math.random() * 10000).toString()}`) as string
+const id = originalId ?? randomId('boxFormId')
 const type = 'checkbox'
 
 const fallThrough = reactive({
@@ -41,7 +40,6 @@ watch(
 )
 
 onUpdated(() => {
-  console.log('updated')
   Object.assign(fallThrough, {
     ...useAttrs(),
     id,
