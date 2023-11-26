@@ -57,8 +57,3 @@ interface User {
 }
 
 type UserData = Omit<User, 'password'>
-
-type AuthResult = {
-  success: boolean
-  jwt: string
-}
