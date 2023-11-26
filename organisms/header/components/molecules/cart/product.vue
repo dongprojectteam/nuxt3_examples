@@ -20,7 +20,12 @@ watch(selected, (selected: boolean) => {
   })
 })
 
-watch(() => props.product, (product: Product) => selected.value = product.selected === true)
+watch(() => props.product, (product: Product) => {
+  selected.value = product.selected === true
+},
+{
+  deep: true,
+})
 </script>
 
 <template>

@@ -8,7 +8,6 @@ export default defineNuxtConfig({
       path: '~/components/molecules/search',
       prefix: 'Search',
     },
-    '~/components/organisms',
   ],
   runtimeConfig: {
     public: {
