@@ -27,6 +27,16 @@ const onSearch = () => {
     },
   })
 }
+
+onMounted(() => {
+  if (process.client) {
+    window.addEventListener('message', (event: MessageEvent) => {
+      const data: string = event.data
+      if (data.length)        
+        location.reload()
+    })
+  }
+})
 </script>
 
 <template>
