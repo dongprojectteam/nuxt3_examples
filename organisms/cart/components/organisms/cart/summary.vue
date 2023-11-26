@@ -16,9 +16,9 @@ const selectedProductCount = computed(() => props.selectedProducts.length)
 <template>
   <div class='summary border-inactive flex-column'>
     <div class='bg-white p-2'>
-      <div v-if='props.loggedin && props.user'>
-        <h3 class='m-0'>{{ props.user.username }}</h3>
-        <div>{{ addressToString(props.user) }}</div>
+      <div v-if='loggedin && user'>
+        <h3 class='m-0'>{{ user.username }}</h3>
+        <div>{{ addressToString(user) }}</div>
       </div>
       <div v-else>
         <div>로그인을 하세요</div>
@@ -52,8 +52,8 @@ const selectedProductCount = computed(() => props.selectedProducts.length)
           <span class='mr-auto t-danger'><b>결제 예정 금액</b></span>
           <span class='t-danger t-lg'><b>${{ summation }}</b></span>
         </div>
-      </div>
-      <button v-if='loggedin' class='w-100 bg-danger t-white md'>주문하기</button>
+        <button v-if='loggedin' class='w-100 bg-danger t-white md'>주문하기</button>
+      </div>      
     </div>
   </div>
 </template>
