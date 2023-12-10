@@ -1,0 +1,861 @@
+@charset "UTF-8";
+/* 코드 1: 헬퍼 사용 및 네임스페이스 제거 */
+:root {
+  --color-primary: rgb(255, 83, 0);
+  --color-default: rgb(255, 168, 0);
+  --color-white: rgb(255, 255, 255);
+  --color-dark: rgb(61, 61, 61);
+  --color-inactive: rgb(202, 202, 202);
+  --color-danger: rgb(204, 57, 57);
+  --font-size-small: 0.8rem;
+  --font-normal-small: 1.0rem;
+  --font-size-medium: 1.2rem;
+  --font-size-large: 1.4rem;
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+  color: var(--color-primary);
+  text-decoration: unset;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+button {
+  height: 100%;
+  font-family: "Arial Black";
+  font-weight: bold;
+  color: var(--color-white);
+  background-color: var(--color-default);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+button:hover {
+  transform: translateY(1px);
+}
+
+button:active {
+  box-shadow: 0 1px var(--color-dark);
+}
+
+.bg-primary {
+  background-color: rgb(255, 83, 0);
+}
+
+.bg-default {
+  background-color: rgb(255, 168, 0);
+}
+
+.bg-white {
+  background-color: rgb(255, 255, 255);
+}
+
+.bg-dark {
+  background-color: rgb(61, 61, 61);
+}
+
+.bg-danger {
+  background-color: rgb(204, 57, 57);
+}
+
+.bg-inactive {
+  background-color: rgb(202, 202, 202);
+}
+
+/* 코드 2: mixin 선언 */
+/* 코드 3: map 선언 */
+/* 코드 4: 반복문 사용 */
+.t-sm {
+  font-size: 0.8rem;
+}
+
+.t-md {
+  font-size: 1.2rem;
+}
+
+.t-lg {
+  font-size: 1.4rem;
+}
+
+.t-primary {
+  color: rgb(255, 83, 0);
+}
+
+.t-default {
+  color: rgb(255, 168, 0);
+}
+
+.t-white {
+  color: rgb(255, 255, 255);
+}
+
+.t-dark {
+  color: rgb(61, 61, 61);
+}
+
+.t-danger {
+  color: rgb(204, 57, 57);
+}
+
+.t-inactive {
+  color: rgb(202, 202, 202);
+}
+
+/* 코드 5: 일반 CSS */
+.t-center {
+  text-align: center;
+}
+
+.t-bold {
+  font-weight: bold;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.h-90 {
+  height: 90% !important;
+}
+
+.h-80 {
+  height: 80% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.sm {
+  font-size: 0.8rem;
+  height: 2rem;
+}
+
+.md {
+  font-size: 1.2rem;
+  height: 2.8rem;
+}
+
+.lg {
+  font-size: 1.4rem;
+  height: 3.6rem;
+}
+
+.rounded, .rounded-inactive, .rounded-danger, .rounded-dark, .rounded-white, .rounded-default, .rounded-primary {
+  border-radius: 10px;
+}
+.rounded-primary {
+  border-color: rgb(255, 83, 0);
+}
+.rounded-left, .rounded-left-inactive, .rounded-left-danger, .rounded-left-dark, .rounded-left-white, .rounded-left-default, .rounded-left-primary {
+  border-radius: 10px 0 0 10px;
+}
+.rounded-left-primary {
+  border-color: rgb(255, 83, 0);
+}
+.rounded-right, .rounded-right-inactive, .rounded-right-danger, .rounded-right-dark, .rounded-right-white, .rounded-right-default, .rounded-right-primary {
+  border-radius: 0 10px 10px 0;
+}
+.rounded-right-primary {
+  border-color: rgb(255, 83, 0);
+}
+.rounded-top, .rounded-top-inactive, .rounded-top-danger, .rounded-top-dark, .rounded-top-white, .rounded-top-default, .rounded-top-primary {
+  border-radius: 10px 10px 0 0 ;
+}
+.rounded-top-primary {
+  border-color: rgb(255, 83, 0);
+}
+.rounded-bottom, .rounded-bottom-inactive, .rounded-bottom-danger, .rounded-bottom-dark, .rounded-bottom-white, .rounded-bottom-default, .rounded-bottom-primary {
+  border-radius: 0 0 10px 10px;
+}
+.rounded-bottom-primary {
+  border-color: rgb(255, 83, 0);
+}
+
+.border, .border-inactive, .border-danger, .border-dark, .border-white, .border-default, .border-primary {
+  border: 1px solid;
+}
+.border-primary {
+  border-color: rgb(255, 83, 0);
+}
+.border-left, .border-left-inactive, .border-left-danger, .border-left-dark, .border-left-white, .border-left-default, .border-left-primary {
+  border-left: 1px solid;
+}
+.border-left-primary {
+  border-color: rgb(255, 83, 0);
+}
+.border-right, .border-right-inactive, .border-right-danger, .border-right-dark, .border-right-white, .border-right-default, .border-right-primary {
+  border-right: 1px solid;
+}
+.border-right-primary {
+  border-color: rgb(255, 83, 0);
+}
+.border-top, .border-top-inactive, .border-top-danger, .border-top-dark, .border-top-white, .border-top-default, .border-top-primary {
+  border-top: 1px solid;
+}
+.border-top-primary {
+  border-color: rgb(255, 83, 0);
+}
+.border-bottom, .border-bottom-inactive, .border-bottom-danger, .border-bottom-dark, .border-bottom-white, .border-bottom-default, .border-bottom-primary {
+  border-bottom: 1px solid;
+}
+.border-bottom-primary {
+  border-color: rgb(255, 83, 0);
+}
+
+.rounded, .rounded-inactive, .rounded-danger, .rounded-dark, .rounded-white, .rounded-default, .rounded-primary {
+  border-radius: 10px;
+}
+.rounded-default {
+  border-color: rgb(255, 168, 0);
+}
+.rounded-left, .rounded-left-inactive, .rounded-left-danger, .rounded-left-dark, .rounded-left-white, .rounded-left-default, .rounded-left-primary {
+  border-radius: 10px 0 0 10px;
+}
+.rounded-left-default {
+  border-color: rgb(255, 168, 0);
+}
+.rounded-right, .rounded-right-inactive, .rounded-right-danger, .rounded-right-dark, .rounded-right-white, .rounded-right-default, .rounded-right-primary {
+  border-radius: 0 10px 10px 0;
+}
+.rounded-right-default {
+  border-color: rgb(255, 168, 0);
+}
+.rounded-top, .rounded-top-inactive, .rounded-top-danger, .rounded-top-dark, .rounded-top-white, .rounded-top-default, .rounded-top-primary {
+  border-radius: 10px 10px 0 0 ;
+}
+.rounded-top-default {
+  border-color: rgb(255, 168, 0);
+}
+.rounded-bottom, .rounded-bottom-inactive, .rounded-bottom-danger, .rounded-bottom-dark, .rounded-bottom-white, .rounded-bottom-default, .rounded-bottom-primary {
+  border-radius: 0 0 10px 10px;
+}
+.rounded-bottom-default {
+  border-color: rgb(255, 168, 0);
+}
+
+.border, .border-inactive, .border-danger, .border-dark, .border-white, .border-default, .border-primary {
+  border: 1px solid;
+}
+.border-default {
+  border-color: rgb(255, 168, 0);
+}
+.border-left, .border-left-inactive, .border-left-danger, .border-left-dark, .border-left-white, .border-left-default, .border-left-primary {
+  border-left: 1px solid;
+}
+.border-left-default {
+  border-color: rgb(255, 168, 0);
+}
+.border-right, .border-right-inactive, .border-right-danger, .border-right-dark, .border-right-white, .border-right-default, .border-right-primary {
+  border-right: 1px solid;
+}
+.border-right-default {
+  border-color: rgb(255, 168, 0);
+}
+.border-top, .border-top-inactive, .border-top-danger, .border-top-dark, .border-top-white, .border-top-default, .border-top-primary {
+  border-top: 1px solid;
+}
+.border-top-default {
+  border-color: rgb(255, 168, 0);
+}
+.border-bottom, .border-bottom-inactive, .border-bottom-danger, .border-bottom-dark, .border-bottom-white, .border-bottom-default, .border-bottom-primary {
+  border-bottom: 1px solid;
+}
+.border-bottom-default {
+  border-color: rgb(255, 168, 0);
+}
+
+.rounded, .rounded-inactive, .rounded-danger, .rounded-dark, .rounded-white, .rounded-primary, .rounded-default {
+  border-radius: 10px;
+}
+.rounded-white {
+  border-color: rgb(255, 255, 255);
+}
+.rounded-left, .rounded-left-inactive, .rounded-left-danger, .rounded-left-dark, .rounded-left-white, .rounded-left-primary, .rounded-left-default {
+  border-radius: 10px 0 0 10px;
+}
+.rounded-left-white {
+  border-color: rgb(255, 255, 255);
+}
+.rounded-right, .rounded-right-inactive, .rounded-right-danger, .rounded-right-dark, .rounded-right-white, .rounded-right-primary, .rounded-right-default {
+  border-radius: 0 10px 10px 0;
+}
+.rounded-right-white {
+  border-color: rgb(255, 255, 255);
+}
+.rounded-top, .rounded-top-inactive, .rounded-top-danger, .rounded-top-dark, .rounded-top-white, .rounded-top-primary, .rounded-top-default {
+  border-radius: 10px 10px 0 0 ;
+}
+.rounded-top-white {
+  border-color: rgb(255, 255, 255);
+}
+.rounded-bottom, .rounded-bottom-inactive, .rounded-bottom-danger, .rounded-bottom-dark, .rounded-bottom-white, .rounded-bottom-primary, .rounded-bottom-default {
+  border-radius: 0 0 10px 10px;
+}
+.rounded-bottom-white {
+  border-color: rgb(255, 255, 255);
+}
+
+.border, .border-inactive, .border-danger, .border-dark, .border-white, .border-primary, .border-default {
+  border: 1px solid;
+}
+.border-white {
+  border-color: rgb(255, 255, 255);
+}
+.border-left, .border-left-inactive, .border-left-danger, .border-left-dark, .border-left-white, .border-left-primary, .border-left-default {
+  border-left: 1px solid;
+}
+.border-left-white {
+  border-color: rgb(255, 255, 255);
+}
+.border-right, .border-right-inactive, .border-right-danger, .border-right-dark, .border-right-white, .border-right-primary, .border-right-default {
+  border-right: 1px solid;
+}
+.border-right-white {
+  border-color: rgb(255, 255, 255);
+}
+.border-top, .border-top-inactive, .border-top-danger, .border-top-dark, .border-top-white, .border-top-primary, .border-top-default {
+  border-top: 1px solid;
+}
+.border-top-white {
+  border-color: rgb(255, 255, 255);
+}
+.border-bottom, .border-bottom-inactive, .border-bottom-danger, .border-bottom-dark, .border-bottom-white, .border-bottom-primary, .border-bottom-default {
+  border-bottom: 1px solid;
+}
+.border-bottom-white {
+  border-color: rgb(255, 255, 255);
+}
+
+.rounded, .rounded-inactive, .rounded-danger, .rounded-dark, .rounded-primary, .rounded-default, .rounded-white {
+  border-radius: 10px;
+}
+.rounded-dark {
+  border-color: rgb(61, 61, 61);
+}
+.rounded-left, .rounded-left-inactive, .rounded-left-danger, .rounded-left-dark, .rounded-left-primary, .rounded-left-default, .rounded-left-white {
+  border-radius: 10px 0 0 10px;
+}
+.rounded-left-dark {
+  border-color: rgb(61, 61, 61);
+}
+.rounded-right, .rounded-right-inactive, .rounded-right-danger, .rounded-right-dark, .rounded-right-primary, .rounded-right-default, .rounded-right-white {
+  border-radius: 0 10px 10px 0;
+}
+.rounded-right-dark {
+  border-color: rgb(61, 61, 61);
+}
+.rounded-top, .rounded-top-inactive, .rounded-top-danger, .rounded-top-dark, .rounded-top-primary, .rounded-top-default, .rounded-top-white {
+  border-radius: 10px 10px 0 0 ;
+}
+.rounded-top-dark {
+  border-color: rgb(61, 61, 61);
+}
+.rounded-bottom, .rounded-bottom-inactive, .rounded-bottom-danger, .rounded-bottom-dark, .rounded-bottom-primary, .rounded-bottom-default, .rounded-bottom-white {
+  border-radius: 0 0 10px 10px;
+}
+.rounded-bottom-dark {
+  border-color: rgb(61, 61, 61);
+}
+
+.border, .border-inactive, .border-danger, .border-dark, .border-primary, .border-default, .border-white {
+  border: 1px solid;
+}
+.border-dark {
+  border-color: rgb(61, 61, 61);
+}
+.border-left, .border-left-inactive, .border-left-danger, .border-left-dark, .border-left-primary, .border-left-default, .border-left-white {
+  border-left: 1px solid;
+}
+.border-left-dark {
+  border-color: rgb(61, 61, 61);
+}
+.border-right, .border-right-inactive, .border-right-danger, .border-right-dark, .border-right-primary, .border-right-default, .border-right-white {
+  border-right: 1px solid;
+}
+.border-right-dark {
+  border-color: rgb(61, 61, 61);
+}
+.border-top, .border-top-inactive, .border-top-danger, .border-top-dark, .border-top-primary, .border-top-default, .border-top-white {
+  border-top: 1px solid;
+}
+.border-top-dark {
+  border-color: rgb(61, 61, 61);
+}
+.border-bottom, .border-bottom-inactive, .border-bottom-danger, .border-bottom-dark, .border-bottom-primary, .border-bottom-default, .border-bottom-white {
+  border-bottom: 1px solid;
+}
+.border-bottom-dark {
+  border-color: rgb(61, 61, 61);
+}
+
+.rounded, .rounded-inactive, .rounded-danger, .rounded-primary, .rounded-default, .rounded-white, .rounded-dark {
+  border-radius: 10px;
+}
+.rounded-danger {
+  border-color: rgb(204, 57, 57);
+}
+.rounded-left, .rounded-left-inactive, .rounded-left-danger, .rounded-left-primary, .rounded-left-default, .rounded-left-white, .rounded-left-dark {
+  border-radius: 10px 0 0 10px;
+}
+.rounded-left-danger {
+  border-color: rgb(204, 57, 57);
+}
+.rounded-right, .rounded-right-inactive, .rounded-right-danger, .rounded-right-primary, .rounded-right-default, .rounded-right-white, .rounded-right-dark {
+  border-radius: 0 10px 10px 0;
+}
+.rounded-right-danger {
+  border-color: rgb(204, 57, 57);
+}
+.rounded-top, .rounded-top-inactive, .rounded-top-danger, .rounded-top-primary, .rounded-top-default, .rounded-top-white, .rounded-top-dark {
+  border-radius: 10px 10px 0 0 ;
+}
+.rounded-top-danger {
+  border-color: rgb(204, 57, 57);
+}
+.rounded-bottom, .rounded-bottom-inactive, .rounded-bottom-danger, .rounded-bottom-primary, .rounded-bottom-default, .rounded-bottom-white, .rounded-bottom-dark {
+  border-radius: 0 0 10px 10px;
+}
+.rounded-bottom-danger {
+  border-color: rgb(204, 57, 57);
+}
+
+.border, .border-inactive, .border-danger, .border-primary, .border-default, .border-white, .border-dark {
+  border: 1px solid;
+}
+.border-danger {
+  border-color: rgb(204, 57, 57);
+}
+.border-left, .border-left-inactive, .border-left-danger, .border-left-primary, .border-left-default, .border-left-white, .border-left-dark {
+  border-left: 1px solid;
+}
+.border-left-danger {
+  border-color: rgb(204, 57, 57);
+}
+.border-right, .border-right-inactive, .border-right-danger, .border-right-primary, .border-right-default, .border-right-white, .border-right-dark {
+  border-right: 1px solid;
+}
+.border-right-danger {
+  border-color: rgb(204, 57, 57);
+}
+.border-top, .border-top-inactive, .border-top-danger, .border-top-primary, .border-top-default, .border-top-white, .border-top-dark {
+  border-top: 1px solid;
+}
+.border-top-danger {
+  border-color: rgb(204, 57, 57);
+}
+.border-bottom, .border-bottom-inactive, .border-bottom-danger, .border-bottom-primary, .border-bottom-default, .border-bottom-white, .border-bottom-dark {
+  border-bottom: 1px solid;
+}
+.border-bottom-danger {
+  border-color: rgb(204, 57, 57);
+}
+
+.rounded, .rounded-inactive, .rounded-primary, .rounded-default, .rounded-white, .rounded-dark, .rounded-danger {
+  border-radius: 10px;
+}
+.rounded-inactive {
+  border-color: rgb(202, 202, 202);
+}
+.rounded-left, .rounded-left-inactive, .rounded-left-primary, .rounded-left-default, .rounded-left-white, .rounded-left-dark, .rounded-left-danger {
+  border-radius: 10px 0 0 10px;
+}
+.rounded-left-inactive {
+  border-color: rgb(202, 202, 202);
+}
+.rounded-right, .rounded-right-inactive, .rounded-right-primary, .rounded-right-default, .rounded-right-white, .rounded-right-dark, .rounded-right-danger {
+  border-radius: 0 10px 10px 0;
+}
+.rounded-right-inactive {
+  border-color: rgb(202, 202, 202);
+}
+.rounded-top, .rounded-top-inactive, .rounded-top-primary, .rounded-top-default, .rounded-top-white, .rounded-top-dark, .rounded-top-danger {
+  border-radius: 10px 10px 0 0 ;
+}
+.rounded-top-inactive {
+  border-color: rgb(202, 202, 202);
+}
+.rounded-bottom, .rounded-bottom-inactive, .rounded-bottom-primary, .rounded-bottom-default, .rounded-bottom-white, .rounded-bottom-dark, .rounded-bottom-danger {
+  border-radius: 0 0 10px 10px;
+}
+.rounded-bottom-inactive {
+  border-color: rgb(202, 202, 202);
+}
+
+.border, .border-inactive, .border-primary, .border-default, .border-white, .border-dark, .border-danger {
+  border: 1px solid;
+}
+.border-inactive {
+  border-color: rgb(202, 202, 202);
+}
+.border-left, .border-left-inactive, .border-left-primary, .border-left-default, .border-left-white, .border-left-dark, .border-left-danger {
+  border-left: 1px solid;
+}
+.border-left-inactive {
+  border-color: rgb(202, 202, 202);
+}
+.border-right, .border-right-inactive, .border-right-primary, .border-right-default, .border-right-white, .border-right-dark, .border-right-danger {
+  border-right: 1px solid;
+}
+.border-right-inactive {
+  border-color: rgb(202, 202, 202);
+}
+.border-top, .border-top-inactive, .border-top-primary, .border-top-default, .border-top-white, .border-top-dark, .border-top-danger {
+  border-top: 1px solid;
+}
+.border-top-inactive {
+  border-color: rgb(202, 202, 202);
+}
+.border-bottom, .border-bottom-inactive, .border-bottom-primary, .border-bottom-default, .border-bottom-white, .border-bottom-dark, .border-bottom-danger {
+  border-bottom: 1px solid;
+}
+.border-bottom-inactive {
+  border-color: rgb(202, 202, 202);
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.pl-0 {
+  padding-left: 0px !important;
+}
+
+.ml-0 {
+  margin-left: 0px !important;
+}
+
+.pr-0 {
+  padding-right: 0px !important;
+}
+
+.mr-0 {
+  margin-right: 0px !important;
+}
+
+.pt-0 {
+  padding-top: 0px !important;
+}
+
+.mt-0 {
+  margin-top: 0px !important;
+}
+
+.pb-0 {
+  padding-bottom: 0px !important;
+}
+
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+
+.p-1 {
+  padding: 5px;
+}
+
+.px-1 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.py-1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.m-1 {
+  margin: 5px;
+}
+
+.mx-1 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.my-1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.pl-1 {
+  padding-left: 5px !important;
+}
+
+.ml-1 {
+  margin-left: 5px !important;
+}
+
+.pr-1 {
+  padding-right: 5px !important;
+}
+
+.mr-1 {
+  margin-right: 5px !important;
+}
+
+.pt-1 {
+  padding-top: 5px !important;
+}
+
+.mt-1 {
+  margin-top: 5px !important;
+}
+
+.pb-1 {
+  padding-bottom: 5px !important;
+}
+
+.mb-1 {
+  margin-bottom: 5px !important;
+}
+
+.p-2 {
+  padding: 15px;
+}
+
+.px-2 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.py-2 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.m-2 {
+  margin: 15px;
+}
+
+.mx-2 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.my-2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.pl-2 {
+  padding-left: 15px !important;
+}
+
+.ml-2 {
+  margin-left: 15px !important;
+}
+
+.pr-2 {
+  padding-right: 15px !important;
+}
+
+.mr-2 {
+  margin-right: 15px !important;
+}
+
+.pt-2 {
+  padding-top: 15px !important;
+}
+
+.mt-2 {
+  margin-top: 15px !important;
+}
+
+.pb-2 {
+  padding-bottom: 15px !important;
+}
+
+.mb-2 {
+  margin-bottom: 15px !important;
+}
+
+.p-3 {
+  padding: 25px;
+}
+
+.px-3 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.py-3 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.m-3 {
+  margin: 25px;
+}
+
+.mx-3 {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.my-3 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.pl-3 {
+  padding-left: 25px !important;
+}
+
+.ml-3 {
+  margin-left: 25px !important;
+}
+
+.pr-3 {
+  padding-right: 25px !important;
+}
+
+.mr-3 {
+  margin-right: 25px !important;
+}
+
+.pt-3 {
+  padding-top: 25px !important;
+}
+
+.mt-3 {
+  margin-top: 25px !important;
+}
+
+.pb-3 {
+  padding-bottom: 25px !important;
+}
+
+.mb-3 {
+  margin-bottom: 25px !important;
+}
+
+.p-4 {
+  padding: 35px;
+}
+
+.px-4 {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.py-4 {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.m-4 {
+  margin: 35px;
+}
+
+.mx-4 {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.my-4 {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.pl-4 {
+  padding-left: 35px !important;
+}
+
+.ml-4 {
+  margin-left: 35px !important;
+}
+
+.pr-4 {
+  padding-right: 35px !important;
+}
+
+.mr-4 {
+  margin-right: 35px !important;
+}
+
+.pt-4 {
+  padding-top: 35px !important;
+}
+
+.mt-4 {
+  margin-top: 35px !important;
+}
+
+.pb-4 {
+  padding-bottom: 35px !important;
+}
+
+.mb-4 {
+  margin-bottom: 35px !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+/* 코드 2: @extend 규칙을 이용한 선택자 확장 */
+.flex, .flex-column, .flex-hcenter, .flex-vcenter, .flex-center {
+  display: flex;
+}
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+.flex-vcenter {
+  align-items: center;
+}
+.flex-hcenter {
+  justify-content: center;
+}
+.flex-column {
+  flex-flow: column;
+}/*# sourceMappingURL=index.css.map */

@@ -1,3 +1,4 @@
+
 <script lang='ts' setup>
 const props = defineProps<{
   product: Product
