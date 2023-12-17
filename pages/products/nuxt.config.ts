@@ -1,6 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
   css: ['~/assets/index.css', '~/assets/scss/index.scss'],
   components: [
     '~/components/molecules',
@@ -17,16 +15,4 @@ export default defineNuxtConfig({
       apiBase: process.env.NUXT_PUBLIC_API_BASE || 'https://fakestoreapi.com/',
     },
   },
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@use "~/assets/scss/_variables.scss" as *;',
-        },
-      },
-    },
-  },
 })
-
-//
-// https://nuxt.com/docs/getting-started/assets
